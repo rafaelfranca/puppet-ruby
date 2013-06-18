@@ -6,7 +6,6 @@
 
 class ruby::ree_1_8_7_2012_02 {
   require gcc
-  require xquartz
 
   case $::osfamily {
     Darwin: {
@@ -14,7 +13,6 @@ class ruby::ree_1_8_7_2012_02 {
 
       $env = {
         'CC'       => "${boxen::config::home}/homebrew/bin/gcc-4.2",
-        'CPPFLAGS' => '-I/opt/X11/include',
       }
     }
 
